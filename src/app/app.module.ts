@@ -28,8 +28,6 @@ import { TransaccionPedidoComponent } from './components/transaccion-pedido/tran
 import { ConsultaPedidoComponent } from './components/consulta-pedido/consulta-pedido.component';
 import { ConsultaComprobanteComponent } from './components/consulta-comprobante/consulta-comprobante.component';
 
-const LOCAL_HOST = 'http://localhost:8090/'
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +66,9 @@ const LOCAL_HOST = 'http://localhost:8090/'
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

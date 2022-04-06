@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TipoReclamo } from '../models/tipo-reclamo.model';
+import { AppSettings } from '../app.settings';
 
-const baseUrl="http://localhost:8090/url/lista"
+const baseUrlUtil = AppSettings.API_ENDPOINT+ '/util';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,6 @@ export class TipoReclamoService {
   constructor(private htttp:HttpClient) {   }
 
   listaTipoReclamo():Observable<TipoReclamo[]>{
-    return this.htttp.get<TipoReclamo[]>(baseUrl+"/listaTipoReclamo");
+    return this.htttp.get<TipoReclamo[]>(baseUrlUtil+"/listaTipoReclamo");
   }
 }
